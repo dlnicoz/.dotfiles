@@ -1,1 +1,0 @@
-/home/iori/.bashrc
