@@ -12,7 +12,7 @@ spectre.setup({
 	},
 	mapping = {
 		["toggle_line"] = {
-			map = "t",
+			map = "gt",
 			cmd = "<cmd>lua require('spectre').toggle_line()<CR>",
 			desc = "toggle current item",
 		},

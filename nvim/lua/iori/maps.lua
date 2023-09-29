@@ -3,8 +3,10 @@ local function map(m, k, v)
 end
 
 
+map("n", "<leader>q", "<cmd>lua require('spectre').open()<CR>")
 -- formating using nullls
 
+map("n", "<leader>e", "<CMD>:EslintFixAll<CR>")
 -- Keybindings for telescope
 map("n", "<leader>fr", "<CMD>Telescope oldfiles<CR>")
 map("n", "<leader>ff", "<CMD>Telescope find_files<CR>")
@@ -12,6 +14,10 @@ map("n", "<leader>fb", "<CMD>Telescope file_browser<CR>")
 map("n", "<leader>fw", "<CMD>Telescope live_grep<CR>")
 map("n", "<leader>ht", "<CMD>Telescope colorscheme<CR>")
 
+map("n", "<leader>;", ":HopWordCurrentLineBC<CR>")
+map("n", "<leader>j", ":HopWordAC<CR>")
+map("n", "<leader>k", ":HopWordBC<CR>")
+map("n", "<leader>l", ":HopWordCurrentLineAC<CR>")
 
 map("i","jj","<Esc>")
 
@@ -20,7 +26,7 @@ map("n","'","5k")
 
 -- map("n","gff",":Files<cr>")
 
-map("n","mm",":bnext<CR>")
+map("n","MM",":bnext<CR>")
 map("n","nn",":bprevious<CR>")
 map("n","..",":bd<CR>")
 
@@ -47,11 +53,11 @@ map("n","<C-Down>",":resize -3<CR>")
 
 map("v","<C-c>",'"+yi')
 -- copy and paste with system
--- map("n","<leader>p","+p")
--- map("v","<leader>p","+p")
--- map("n","<leader>P","+P")
+map("n","<leader>p","+p")
+map("v","<leader>p","+p")
+map("n","<leader>P","+P")
 -- map("v","<leader>P","+P")
--- map("i","<leader>y","*y")
+map("i","<leader>y","*y")
 map("v","<leader>y","y$")
 -- map("n","<leader>Y","+y$")
 -- nnoremap <leader>p "+p
@@ -60,3 +66,22 @@ map("v","<leader>y","y$")
 -- vnoremap <leader>P "+P
 -- nnoremap <leader>y "+y
 -- vnoremap <leader>y +y
+-- Lua
+vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>",
+  {silent = true,  }
+)
+vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>",
+  {silent = true,  }
+)
+vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>",
+  {silent = true,  }
+)
+vim.keymap.set("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>",
+  {silent = true,  }
+)
+vim.keymap.set("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>",
+  {silent = true,  }
+)
+vim.keymap.set("n", "gR", "<cmd>TroubleToggle lsp_references<cr>",
+  {silent = true,  }
+)

@@ -7,13 +7,25 @@ vim.api.nvim_set_option("clipboard","unnamed")
 -- DO NOT INCLUDE THIS
 vim.opt.rtp:append("~/personal/streamer-tools")
 -- DO NOT INCLUDE THIS
-
 local augroup = vim.api.nvim_create_augroup
-local IoriGroup = augroup('iori', {})
-
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
-
+vim.fn.sign_define(
+  "LspDiagnosticsSignError",
+  { texthl = "LspDiagnosticsSignError", text = "", numhl = "LspDiagnosticsSignError" }
+)
+vim.fn.sign_define(
+  "LspDiagnosticsSignWarning",
+  { texthl = "LspDiagnosticsSignWarning", text = "", numhl = "LspDiagnosticsSignWarning" }
+)
+vim.fn.sign_define(
+  "LspDiagnosticsSignHint",
+  { texthl = "LspDiagnosticsSignHint", text = "➤", numhl = "LspDiagnosticsSignHint" }
+)
+vim.fn.sign_define(
+  "LspDiagnosticsSignInformation",
+  { texthl = "LspDiagnosticsSignInformation", text = "", numhl = "LspDiagnosticsSignInformation" }
+)
 function R(name)
     require("plenary.reload").reload_module(name)
 end
