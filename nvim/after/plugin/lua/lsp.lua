@@ -81,9 +81,14 @@ lsp.set_preferences({
         warn = '▲',
         hint = '⚑',
         info = ''
-    }
+    },
+lsp.set_sign_icons({
+					error = '✘',
+					warn = '▲',
+					hint = '⚑',
+					info = ''
+			})
 })
-
 local null_ls = require("null-ls")
 null_ls.setup({
   sources = {

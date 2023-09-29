@@ -1,4 +1,0 @@
-local options = {
-    clipboard = "unnamedplus",
-}
-
