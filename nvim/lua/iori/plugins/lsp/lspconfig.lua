@@ -111,6 +111,18 @@ return {
       end,
     })
 
+-- lspsaga ----------------------------------------------------
+require("lspsaga").setup({
+  symbol_in_winbar = {
+    enable = true,
+  },
+  ui = {
+    code_action = ""
+  }
+
+})
+
+
     -- configure prisma orm server
     lspconfig["prismals"].setup({
       capabilities = capabilities,

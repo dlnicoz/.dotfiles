@@ -23,9 +23,9 @@ return {
 
   "karb94/neoscroll.nvim",
 
-  "lukas-reineke/indent-blankline.nvim",
+  -- "lukas-reineke/indent-blankline.nvim",
 
-  -- "echasnovski/mini.indentscope",
+  "echasnovski/mini.indentscope",
 
-  "nvim-treesitter/nvim-treesitter-context",
+  "nvimdev/lspsaga.nvim",
 }
