@@ -1,1 +1,2 @@
-require("iori")
+require("iori.core")
+require("iori.lazy")
