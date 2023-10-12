@@ -28,4 +28,8 @@ return {
   "echasnovski/mini.indentscope",
 
   "nvimdev/lspsaga.nvim",
+
+  "folke/tokyonight.nvim",
+
+  "sainnhe/sonokai",
 }

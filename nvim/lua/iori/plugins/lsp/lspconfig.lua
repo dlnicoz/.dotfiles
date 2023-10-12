@@ -81,7 +81,15 @@ return {
       capabilities = capabilities,
       on_attach = on_attach,
     })
-
+    lspconfig.eslint.setup({
+      --- ...
+      on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd("BufWritePre", {
+          buffer = bufnr,
+          command = "EslintFixAll",
+        })
+      end,
+    })
     -- configure css server
     lspconfig["cssls"].setup({
       capabilities = capabilities,
@@ -111,17 +119,15 @@ return {
       end,
     })
 
--- lspsaga ----------------------------------------------------
-require("lspsaga").setup({
-  symbol_in_winbar = {
-    enable = true,
-  },
-  ui = {
-    code_action = ""
-  }
-
-})
-
+    -- lspsaga ----------------------------------------------------
+    require("lspsaga").setup({
+      symbol_in_winbar = {
+        enable = true,
+      },
+      ui = {
+        code_action = "",
+      },
+    })
 
     -- configure prisma orm server
     lspconfig["prismals"].setup({

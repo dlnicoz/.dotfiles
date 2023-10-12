@@ -13,7 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({ { import = "iori.plugins" }, { import = "iori.plugins.lsp" } }, {
   install = {
-    colorscheme = { "gruvbox" },
+    colorscheme = { "tokyonight-moon" },
   },
   checker = {
     enabled = true,
