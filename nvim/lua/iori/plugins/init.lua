@@ -32,4 +32,18 @@ return {
   "folke/tokyonight.nvim",
 
   "sainnhe/sonokai",
+
+  "rose-pine/neovim",
+
+ "lunarvim/onedarker.nvim",
+ 
+ "lunarvim/darkplus.nvim",
+
+ "kevinhwang91/nvim-bqf",
+ "p00f/nvim-ts-rainbow",
+ "lewis6991/gitsigns.nvim",
+	-- "f-person/git-blame.nvim",
+	"ruifm/gitlinker.nvim",
+	"mattn/vim-gist",
+	"mattn/webapi-vim",
 }

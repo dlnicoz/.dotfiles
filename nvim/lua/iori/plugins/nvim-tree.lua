@@ -22,6 +22,9 @@ return {
         indent_markers = {
           enable = false
         },
+        -- mini_indent_markers = {
+        --   enable = false
+        -- },
         -- icons = {
         --   glyphs = {
         --     folder = {

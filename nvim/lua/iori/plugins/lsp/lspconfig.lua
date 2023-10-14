@@ -81,8 +81,15 @@ return {
       capabilities = capabilities,
       on_attach = on_attach,
     })
+
+    -- vim.api.nvim_create_autocmd("BufWritePre", {
+    --   pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
+    --   command = "silent! EslintFixAll",
+    --   group = vim.api.nvim_create_augroup("MyAutocmdsJavaScripFormatting", {}),
+    -- })
+
     lspconfig.eslint.setup({
-      --- ...
+      capabilities = capabilities,
       on_attach = function(client, bufnr)
         vim.api.nvim_create_autocmd("BufWritePre", {
           buffer = bufnr,
@@ -90,6 +97,7 @@ return {
         })
       end,
     })
+    --
     -- configure css server
     lspconfig["cssls"].setup({
       capabilities = capabilities,
