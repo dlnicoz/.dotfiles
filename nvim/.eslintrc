@@ -1,0 +1,12 @@
+{
+  "plugins": ["prettier"],
+  "extends": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
+   
+// npm install --save-dev prettier eslint-plugin-prettier
+// npm install --save-dev eslint-config-prettier
+// npm install --save-dev eslint
+
