@@ -4,7 +4,15 @@ return {
   "christoomey/vim-tmux-navigator", -- tmux & split window navigation
 
   "inkarkat/vim-ReplaceWithRegister", -- replace with register contents using motion (gr + motion)
-
+  {
+    "roobert/tailwindcss-colorizer-cmp.nvim",
+    -- optionally, override the default options:
+    config = function()
+      require("tailwindcss-colorizer-cmp").setup({
+        color_square_width = 2,
+      })
+    end,
+  },
   "phaazon/hop.nvim",
 
   "glepnir/dashboard-nvim",
@@ -35,15 +43,15 @@ return {
 
   "rose-pine/neovim",
 
- "lunarvim/onedarker.nvim",
- 
- "lunarvim/darkplus.nvim",
+  "lunarvim/onedarker.nvim",
 
- "kevinhwang91/nvim-bqf",
- "p00f/nvim-ts-rainbow",
- "lewis6991/gitsigns.nvim",
-	-- "f-person/git-blame.nvim",
-	"ruifm/gitlinker.nvim",
-	"mattn/vim-gist",
-	"mattn/webapi-vim",
+  "lunarvim/darkplus.nvim",
+
+  "kevinhwang91/nvim-bqf",
+  "p00f/nvim-ts-rainbow",
+  "lewis6991/gitsigns.nvim",
+  -- "f-person/git-blame.nvim",
+  "ruifm/gitlinker.nvim",
+  "mattn/vim-gist",
+  "mattn/webapi-vim",
 }
