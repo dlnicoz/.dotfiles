@@ -9,6 +9,14 @@ return {
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
 
+    -- adding organize imports feature
+    local function organize_imports()
+      local params = {
+        command = "_typescript.organizeImports",
+        arguments = { vim.api.nvim_buf_get_name(0) },
+      }
+      vim.lsp.buf.execute_command(params)
+    end
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -80,6 +88,12 @@ return {
     lspconfig["tsserver"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
+      commands = {
+        OrganizeImports = {
+          organize_imports,
+          description = "Organize Imports",
+        },
+      },
     })
 
     -- vim.api.nvim_create_autocmd("BufWritePre", {
