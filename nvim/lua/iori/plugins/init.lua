@@ -21,8 +21,6 @@ return {
 
   "akinsho/bufferline.nvim",
 
-  "andymass/vim-matchup",
-
   "windwp/nvim-autopairs",
 
   "ray-x/lsp_signature.nvim",
@@ -48,7 +46,7 @@ return {
   "lunarvim/darkplus.nvim",
 
   "kevinhwang91/nvim-bqf",
-  "p00f/nvim-ts-rainbow",
+  -- "p00f/nvim-ts-rainbow",
   "lewis6991/gitsigns.nvim",
   -- "f-person/git-blame.nvim",
   "ruifm/gitlinker.nvim",
