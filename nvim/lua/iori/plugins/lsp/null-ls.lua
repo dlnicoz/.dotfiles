@@ -1,11 +1,26 @@
 return {
-  "jose-elias-alvarez/null-ls.nvim", -- configure formatters & linters
-  event = { "BufReadPre", "BufNewFile" },
+  "nvimtools/none-ls.nvim", -- configure formatters & linters
+  lazy = true,
+  -- event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
+  dependencies = {
+    "jay-babu/mason-null-ls.nvim",
+  },
   config = function()
-    -- import null-ls plugin
+    local mason_null_ls = require("mason-null-ls")
+
     local null_ls = require("null-ls")
 
     local null_ls_utils = require("null-ls.utils")
+
+    mason_null_ls.setup({
+      ensure_installed = {
+        "prettier", -- prettier formatter
+        "stylua", -- lua formatter
+        "black", -- python formatter
+        "pylint", -- python linter
+        "eslint_d", -- js linter
+      },
+    })
 
     -- for conciseness
     local formatting = null_ls.builtins.formatting -- to setup formatters
@@ -21,14 +36,17 @@ return {
       -- setup formatters & linters
       sources = {
         --  to disable file types use
-        -- (see null-ls docs)
+        --  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
         formatting.prettier.with({
           extra_filetypes = { "svelte" },
         }), -- js/ts formatter
         formatting.stylua, -- lua formatter
+        formatting.isort,
+        formatting.black,
+        diagnostics.pylint,
         diagnostics.eslint_d.with({ -- js/ts linter
           condition = function(utils)
-            return utils.root_has_file({ ".eslintrc.json", ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
+            return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
           end,
         }),
       },
@@ -48,7 +66,6 @@ return {
                 bufnr = bufnr,
               })
             end,
-            -- command = "EslintFixAll",
           })
         end
       end,

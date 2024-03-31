@@ -26,7 +26,7 @@ opt.isfname:append("@-@")
 opt.updatetime = 50
 
 -- line wrapping
-opt.wrap = true -- disable line wrapping
+opt.wrap = false -- disable line wrapping
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching

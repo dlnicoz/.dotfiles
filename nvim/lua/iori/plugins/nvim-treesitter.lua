@@ -24,8 +24,8 @@ return {
         -- ensure these language parsers are installed
         ensure_installed = {
           "json",
-          -- "javascript",
-          -- "typescript",
+          "javascript",
+          "typescript",
           "tsx",
           "yaml",
           "html",
@@ -52,10 +52,7 @@ return {
           extended_mode = true,
           max_file_lines = 1000,
         },
-        autotag = {
-          enable = true,
-        },
-
+       
         textobjects = {
           select = {
             enable = true,
@@ -123,6 +120,8 @@ return {
         -- auto install above language parsers
         auto_install = true,
       })
+      require('ts_context_commentstring').setup {}
+
     end,
   },
 }

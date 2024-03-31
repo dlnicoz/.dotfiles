@@ -43,6 +43,8 @@ return {
 
   "lunarvim/onedarker.nvim",
 
+  "nvim-pack/nvim-spectre",
+
   "lunarvim/darkplus.nvim",
 
   "kevinhwang91/nvim-bqf",

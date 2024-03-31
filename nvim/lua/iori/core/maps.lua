@@ -2,6 +2,10 @@ local function map(m, k, v)
   vim.keymap.set(m, k, v, { silent = true })
 end
 
+-- map <C-v> "+p
+-- vnoremap <C-c> "+y
+map("v", "<C-c>", '"+y')
+map("n", "<C-v>", '"+P')
 map("n", "<leader>;", ":HopWordCurrentLineBC<CR>")
 map("n", "<leader>j", ":HopWordAC<CR>")
 map("n", "<leader>k", ":HopWordBC<CR>")
@@ -37,7 +41,7 @@ map("n", "<C-Right>", ":vertical resize +3<CR>")
 map("n", "<C-Left>", ":vertical resize -3<CR>")
 map("n", "<C-Up>", ":resize +3<CR>")
 map("n", "<C-Down>", ":resize -3<CR>")
-
+vim.api.nvim_set_option("clipboard", "unnamed")
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", { silent = true })
 vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true })
 vim.keymap.set("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true })

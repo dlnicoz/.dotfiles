@@ -9,14 +9,6 @@ return {
     -- import lspconfig plugin
     local lspconfig = require("lspconfig")
 
-    -- adding organize imports feature
-    local function organize_imports()
-      local params = {
-        command = "_typescript.organizeImports",
-        arguments = { vim.api.nvim_buf_get_name(0) },
-      }
-      vim.lsp.buf.execute_command(params)
-    end
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
@@ -84,34 +76,22 @@ return {
       on_attach = on_attach,
     })
 
+     -- lspsaga ----------------------------------------------------
+     require("lspsaga").setup({
+      symbol_in_winbar = {
+        enable = true,
+      },
+      ui = {
+        code_action = "",
+      },
+    })
+
     -- configure typescript server with plugin
     lspconfig["tsserver"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      commands = {
-        OrganizeImports = {
-          organize_imports,
-          description = "Organize Imports",
-        },
-      },
     })
 
-    -- vim.api.nvim_create_autocmd("BufWritePre", {
-    --   pattern = { "*.tsx", "*.ts", "*.jsx", "*.js" },
-    --   command = "silent! EslintFixAll",
-    --   group = vim.api.nvim_create_augroup("MyAutocmdsJavaScripFormatting", {}),
-    -- })
-
-    lspconfig.eslint.setup({
-      capabilities = capabilities,
-      on_attach = function(client, bufnr)
-        vim.api.nvim_create_autocmd("BufWritePre", {
-          buffer = bufnr,
-          command = "EslintFixAll",
-        })
-      end,
-    })
-    --
     -- configure css server
     lspconfig["cssls"].setup({
       capabilities = capabilities,
@@ -139,16 +119,6 @@ return {
           end,
         })
       end,
-    })
-
-    -- lspsaga ----------------------------------------------------
-    require("lspsaga").setup({
-      symbol_in_winbar = {
-        enable = true,
-      },
-      ui = {
-        code_action = "",
-      },
     })
 
     -- configure prisma orm server

@@ -27,8 +27,8 @@ return {
       dim_inactive = false,
       transparent_mode = true,
     })
-    -- vim.cmd("colorscheme gruvbox")
-    vim.cmd("colorscheme tokyonight-moon")
+    vim.cmd("colorscheme gruvbox")
+    -- vim.cmd("colorscheme tokyonight-moon")
     --     -- https://github.com/microsoft/vscode/blob/main/src/vs/base/common/codicons.ts
     -- -- go to the above and then enter <c-v>u<unicode> and the symbold should appear
     -- -- or go here and upload the font file: https://mathew-kurian.github.io/CharacterMap/
