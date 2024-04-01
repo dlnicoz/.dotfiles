@@ -2,6 +2,7 @@ require("hop").setup()
 
 return {
   "phaazon/hop.nvim",
+  as = "hop",
   dependencies = {},
   config = function()
     local opts = { noremap = true, silent = true }
