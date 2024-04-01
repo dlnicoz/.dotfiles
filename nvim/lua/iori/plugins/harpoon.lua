@@ -8,7 +8,10 @@ return {
       ---@diagnostic disable-next-line: missing-parameter
       harpoon:setup()
       --TODO: probably create my own harpoon list.
-
+      local keymap = vim.keymap.set
+      local opts = { noremap = true, silent = true }
+      keymap("n", "<s-m>", "<cmd>lua require('user.extras.harpoon').mark_file()<cr>", opts)
+  keymap("n", "<TAB>", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", opts)
       vim.keymap.set("n", "<leader>ha", function()
         harpoon:list():append()
       end)

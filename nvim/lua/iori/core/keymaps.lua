@@ -53,8 +53,13 @@ keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
 keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/short.txt<CR>")
 keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+keymap.set("n", "zR", "ufo.openAllFolds")
+keymap.set("n", "zM", "ufo.closeAllFolds")
 
 keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+keymap.set("n", "<leader>w", ":lua vim.wo.wrap = not vim.wo.wrap<CR>")
+

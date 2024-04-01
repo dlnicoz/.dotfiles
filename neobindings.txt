@@ -1,0 +1,16 @@
+session -------
+leader wr - restore session on current dir
+leader ws - save session 
+
+harpoon ------
+leader ha - add file to harpoon
+leader hh - list harpoon ui
+leader hz - change to 1 file
+leader hx - change to 2 file
+leader hc - change to 3 file
+leader hv - change to 4 file
+
+leader ctrl a increment 
+leader ctrl x decrement
+leader ctrl a increment visual 
+leader ctrl x decrement visual
