@@ -4,6 +4,8 @@ local M = {
   dependencies = {
     {
       "folke/neodev.nvim",
+      "nvimdev/lspsaga.nvim",
+      "shellRaining/hlchunk.nvim",
     },
   },
 }
@@ -88,6 +90,14 @@ function M.config()
   local lspconfig = require "lspconfig"
   local icons = require "user.icons"
 
+  require("lspsaga").setup {
+    symbol_in_winbar = {
+      enable = true,
+    },
+    ui = {
+      code_action = "",
+    },
+  }
   local servers = {
     "lua_ls",
     "cssls",
