@@ -13,19 +13,19 @@ function M.config()
   null_ls.setup {
     debug = true,
     sources = {
-      
-      formatting.prettier.with({
+
+      formatting.prettier.with {
         extra_filetypes = { "svelte" },
-      }), -- js/ts formatter
+      }, -- js/ts formatter
       formatting.stylua, -- lua formatter
       formatting.isort,
       formatting.black,
       diagnostics.pylint,
-      diagnostics.eslint_d.with({ -- js/ts linter
-        condition = function(utils)
-          return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
-        end,
-      }),
+      -- diagnostics.eslint_d.with({ -- js/ts linter
+      --   condition = function(utils)
+      --     return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
+      --   end,
+      -- }),
       -- formatting.prettier.with {
       --   extra_filetypes = { "toml" },
       --   -- extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
@@ -35,7 +35,6 @@ function M.config()
       null_ls.builtins.completion.spell,
     },
   }
-  
 end
 
 return M
