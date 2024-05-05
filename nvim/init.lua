@@ -1,3 +1,14 @@
+if vim.g.neovide then
+  vim.g.neovide_transparency = 0.9
+  vim.g.transparency = 0.9
+  -- vim.g.neovide_floating_blur_amount_x = 1.0
+  -- vim.g.neovide_floating_blur_amount_y = 1.0
+  vim.g.neovide_window_blurred = true
+  vim.o.guifont = "Fira Code iScript:h18"
+  -- vim.o.guifont = "JetBrainsMono NF Medium:h18"
+  -- Put anything you want to happen only in Neovide here
+end
+
 require "user.launch"
 require "user.options"
 require "user.keymaps"
