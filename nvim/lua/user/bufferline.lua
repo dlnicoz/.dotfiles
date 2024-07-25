@@ -12,6 +12,13 @@ return {
         end
         return s
       end,
+      -- indicators = {
+      --   style = "underline"
+      -- }
+      -- mode = "tabs",
+      -- separator_style = "padded_slant",
+      -- show_close_icon = "true",
+      -- show_buffer_close_icons = "true",
     },
   },
 }

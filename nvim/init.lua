@@ -1,8 +1,8 @@
 if vim.g.neovide then
-  vim.g.neovide_transparency = 0.9
-  vim.g.transparency = 0.9
-  -- vim.g.neovide_floating_blur_amount_x = 1.0
-  -- vim.g.neovide_floating_blur_amount_y = 1.0
+  vim.g.neovide_transparency = 0.7
+  -- vim.g.transparency = 0.3
+  vim.g.neovide_floating_blur_amount_x = 1.0
+  vim.g.neovide_floating_blur_amount_y = 1.0
   vim.g.neovide_window_blurred = true
   vim.o.guifont = "Fira Code iScript:h18"
   -- vim.o.guifont = "JetBrainsMono NF Medium:h18"
@@ -35,7 +35,7 @@ spec "user.cmp"
 spec "user.autopairs"
 spec "user.comment"
 spec "user.gitsigns"
-spec "user.neogit"
+-- spec "user.neogit"
 spec "user.diffview"
 -- spec "user.indent-blankline"
 --
@@ -58,7 +58,7 @@ spec "user.nvim-treesitter-text-objects"
 -- -- iori end
 --
 spec "user.netrw"
--- spec "user.project"
+spec "user.project"
 spec "user.toggleterm"
 -- spec "user.bufdelete"
 -- -- Extras
@@ -66,7 +66,7 @@ spec "user.extras.colorizer"
 -- spec "user.extras.smoothie"
 spec "user.extras.neoscroll"
 -- spec "user.extras.copilot"
-spec "user.extras.modicator"
+-- spec "user.extras.modicator"
 spec "user.extras.rainbow"
 spec "user.extras.matchup"
 -- spec "user.extras.bqf"
