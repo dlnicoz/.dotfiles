@@ -20,7 +20,7 @@ return {
         -- enable indentation
         indent = { enable = true },
         -- enable autotagging (w/ nvim-ts-autotag plugin)
-        autotag = { enable = true },
+        autotag = { enable = false },
         -- ensure these language parsers are installed
         ensure_installed = {
           "json",
@@ -52,7 +52,7 @@ return {
           extended_mode = true,
           max_file_lines = 1000,
         },
-       
+
         textobjects = {
           select = {
             enable = true,
@@ -121,7 +121,6 @@ return {
         auto_install = true,
       })
       require('ts_context_commentstring').setup {}
-
     end,
   },
 }

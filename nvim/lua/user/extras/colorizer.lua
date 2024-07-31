@@ -15,6 +15,8 @@ function M.config()
       "astro",
       "lua",
     },
+    css = { rgb_fn = true, },
+    html = { names = false, },
     user_default_options = {
       names = false,
       rgb_fn = true,

@@ -1,6 +1,6 @@
 if vim.g.neovide then
-  vim.g.neovide_transparency = 0.7
-  -- vim.g.transparency = 0.3
+  vim.g.neovide_transparency = 0.97
+  -- vim.g.transparency = 0.8
   vim.g.neovide_floating_blur_amount_x = 1.0
   vim.g.neovide_floating_blur_amount_y = 1.0
   vim.g.neovide_window_blurred = true
@@ -29,7 +29,6 @@ spec "user.nvimtree"
 spec "user.lualine"
 spec "user.whichkey"
 spec "user.dap"
-spec "user.autotag"
 spec "user.sleuth"
 spec "user.cmp"
 spec "user.autopairs"
